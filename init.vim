@@ -24,3 +24,7 @@ set ttyfast                 " Speed up scrolling in Vim
 " set backupdir=~/.cache/vim " Directory to store backup files.
 
 source ~/.config/nvim/vim-plug/plugins.vim
+
+colorscheme dracula
+
+
