@@ -14,4 +14,7 @@ keymap('n', '<c-j>', '<c-w>j', {})
 keymap('n', '<c-k>', '<c-w>k', {})
 keymap('n', '<c-l>', '<c-w>l', {})
 
-
+-- Package Management
+require('packer').startup(function()
+  use 'wbthomason/packer.nvim'
+end)
