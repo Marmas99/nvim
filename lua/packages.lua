@@ -6,5 +6,9 @@ require('packer').startup(function()
         require'alpha'.setup(require'alpha.themes.dashboard'.config)
     end
   }
+  use {
+  'nvim-telescope/telescope.nvim',
+  requires = { {'nvim-lua/plenary.nvim'} }
+  }
 end)
 
