@@ -1,6 +1,7 @@
 local keymap = vim.api.nvim_set_keymap
 keymap('n', '<c-s>', ':w<CR>', {})
 keymap('i', '<c-s>', '<ESC>:w<CR>', {})
+keymap('n', 'q', ':Alpha <CR>', {})
 
 local opst = {noremap = true}
 keymap('n', '<c-h>', '<c-w>h', {})
