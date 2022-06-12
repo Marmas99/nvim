@@ -23,5 +23,6 @@ require('packer').startup(function()
   }	
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
+  use "EdenEast/nightfox.nvim" 
 end)
 
