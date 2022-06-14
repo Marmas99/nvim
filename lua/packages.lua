@@ -33,5 +33,12 @@ require('packer').startup(function()
   'romgrk/barbar.nvim',
   requires = {'kyazdani42/nvim-web-devicons'}
   }
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
 end)
 
