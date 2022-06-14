@@ -1,6 +1,7 @@
 require("general")
 require("keybindings")
 require("packages")
+
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
   ensure_installed = {"lua", "go", "python"},
@@ -48,8 +49,6 @@ lsp_installer.on_server_ready(function(server)
 end)
 
 
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 vim.cmd("colorscheme nightfox")
 
