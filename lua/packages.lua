@@ -40,5 +40,12 @@ require('packer').startup(function()
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
+  use {"akinsho/toggleterm.nvim", tag = 'v1.*', config = function()
+  require("toggleterm").setup{
+    direction = 'float',
+    close_on_exit = true,
+  }
+  end
+  }
 end)
 
