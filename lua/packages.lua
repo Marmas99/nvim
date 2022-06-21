@@ -1,5 +1,6 @@
 require('packer').startup(function()
   use 'wbthomason/packer.nvim'
+
   use {
     'goolord/alpha-nvim',
     requires = { 'kyazdani42/nvim-web-devicons' },
@@ -13,14 +14,22 @@ require('packer').startup(function()
         }
     end
   }
+  
   use {
   'nvim-telescope/telescope.nvim',
-  requires = { {'nvim-lua/plenary.nvim'} }
+  requires = { {'nvim-lua/plenary.nvim'} },
+  require('telescope').setup{
+	pickers = {
+		find_files = {hidden = true}
+	}
   }
+  }
+ 
   use {
     'nvim-treesitter/nvim-treesitter',
      run = ':TSUpdate'
   }	
+
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
   use "EdenEast/nightfox.nvim" 
@@ -29,23 +38,28 @@ require('packer').startup(function()
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
+  
   use {
   'romgrk/barbar.nvim',
   requires = {'kyazdani42/nvim-web-devicons'}
+  }
+
+  use {"akinsho/toggleterm.nvim", tag = 'v1.*', config = function()
+	  require("toggleterm").setup{
+	    direction = 'float',
+	    close_on_exit = true,
+	  }
+	  end
   }
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
     },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  }
-  use {"akinsho/toggleterm.nvim", tag = 'v1.*', config = function()
-  require("toggleterm").setup{
-    direction = 'float',
-    close_on_exit = true,
-  }
-  end
-  }
+    tag = 'nightly', -- optional, updated every week. (see issue #1193)
+    config = function()
+	    require'nvim-tree'.setup{}
+    end,
+}
 end)
 

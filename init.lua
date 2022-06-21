@@ -103,3 +103,6 @@ local cmp = require'cmp'
   require('lspconfig')['sumneko_lua'].setup {
     capabilities = capabilities
   }
+
+
+vim.cmd("set noswapfile")
