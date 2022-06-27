@@ -33,7 +33,6 @@ require('packer').startup(function()
 
   use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
-  use "EdenEast/nightfox.nvim" 
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -63,5 +62,7 @@ require('packer').startup(function()
 	    require'nvim-tree'.setup{}
     end,
 }
+use 'folke/tokyonight.nvim' 
+
 end)
 

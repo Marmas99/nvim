@@ -49,8 +49,7 @@ lsp_installer.on_server_ready(function(server)
 end)
 
 
-
-vim.cmd("colorscheme nightfox")
+vim.cmd[[colorscheme tokyonight]]
 vim.cmd("set number")
 
 local cmp = require'cmp'
