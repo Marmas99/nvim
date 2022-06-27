@@ -19,6 +19,11 @@ require('packer').startup(function()
   'nvim-telescope/telescope.nvim',
   requires = { {'nvim-lua/plenary.nvim'} },
   require('telescope').setup{
+	defaults = {
+		file_ignore_patterns = {
+		".git"
+		}
+	},
 	pickers = {
 		find_files = {hidden = true}
 	},
@@ -45,13 +50,6 @@ require('packer').startup(function()
   requires = {'kyazdani42/nvim-web-devicons'}
   }
 
-  use {"akinsho/toggleterm.nvim", tag = 'v1.*', config = function()
-	  require("toggleterm").setup{
-	    direction = 'float',
-	    close_on_exit = true,
-	  }
-	  end
-  }
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
