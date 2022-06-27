@@ -51,7 +51,7 @@ end)
 
 
 vim.cmd("colorscheme nightfox")
-
+vim.cmd("set number")
 
 local cmp = require'cmp'
 
