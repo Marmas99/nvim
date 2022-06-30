@@ -12,6 +12,9 @@ require('packer').startup(function()
 	  startify.button("q", "quit neovim", ":qa <cr>"),
 	  startify.button("p", "sync packages", ":PackerSync <cr>"),
         }
+	opts = {
+		margin = 20
+	}
     end
   }
   
