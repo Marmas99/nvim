@@ -8,3 +8,4 @@ keymap("n", "Q", ":q<CR>", default_opts)
 
 -- Telescopte
 keymap("n", "F", ":Telescope find_files<CR>", default_opts)
+
