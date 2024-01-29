@@ -29,8 +29,4 @@ return {
 			},	
 		})
 	end,
-	dependencies = {
-		'dcampos/nvim-snippy',
-		'dcampos/cmp-snippy',	
-	},
 }
