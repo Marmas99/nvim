@@ -1,4 +1,5 @@
 return {
+	'dcampos/cmp-snippy',
 	'dcampos/nvim-snippy',
 	config = function()
 		require('snippy').setup({
