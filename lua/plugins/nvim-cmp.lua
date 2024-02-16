@@ -4,6 +4,9 @@ return {
 	'hrsh7th/cmp-buffer',
 	'hrsh7th/cmp-path',
 	'hrsh7th/cmp-cmdline',
+	'dcampos/cmp-snippy',
+	'dcampos/nvim-snippy',
+
 	config = function()
 		  local cmp = require'cmp'
 		  local snippy = require("snippy")
@@ -66,24 +69,30 @@ return {
 	    })
 	  })
 
-	  local lspconfig = require('lspconfig')
-	  local util = require('lspconfig/util')
-		
-	  lspconfig.gopls.setup {
-		cmd = {"gopls", "serve"},
-		filetypes = {"go", "gomod"},
-		root_dir = util.root_pattern("go.work", "go.mod", ".git"),
-		settings = {
-		gopls = {
-		analyses = {
-		unusedparams = true,
-		},
-		staticcheck = true,
-		},
-		},
-		on_attach = on_attach,
-		capabilities = capabilities,
-		}
+	  -- Set up lspconfig.
+	  local capabilities = require('cmp_nvim_lsp').default_capabilities()
+	  -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+	  require('lspconfig')['gopls'].setup {
+	    capabilities = capabilities
+	  }
 
+--  local lspconfig = require('lspconfig')
+--  local util = require('lspconfig/util')
+--	
+--  lspconfig.gopls.setup {
+--	cmd = {"gopls", "serve"},
+--	filetypes = {"go", "gomod"},
+--	root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+--	settings = {
+--	gopls = {
+--	analyses = {
+--	unusedparams = true,
+--	},
+--	staticcheck = true,
+--	},
+--	},
+--	--capabilities = capabilities,
+--	}
+--
 	end,
 }
