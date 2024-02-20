@@ -1,11 +1,4 @@
 
--- Load Keybindings
-require("keymappings")
-
--- Load Commands
-require("commands")
-
-
 -- Bootstrap Lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -20,5 +13,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Load plugins from plugins folder
 require("lazy").setup("plugins")
+
+-- Load plugins from plugins folder
+
+-- Load Keybindings
+require("keymappings")
+
+-- Load Commands
+require("commands")
