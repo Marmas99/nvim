@@ -2,6 +2,9 @@
 -- Load Keybindings
 require("keymappings")
 
+-- Load Commands
+require("commands")
+
 
 -- Bootstrap Lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
