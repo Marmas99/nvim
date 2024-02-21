@@ -4,6 +4,7 @@ return {
   config = function()
     require('dashboard').setup {
       shortcut_type = "number", --  shorcut type 'letter' or 'number'
+      theme = "doom",
       config = {
          header = {
            ' ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
