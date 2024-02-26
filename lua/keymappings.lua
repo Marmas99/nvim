@@ -11,3 +11,7 @@ keymap("n", "qq", ":q<CR>", default_opts)
 keymap("n", "tt", ":terminal<CR>", default_opts)
 
 
+keymap("n", "<C-J>", "<C-W><C-J>", default_opts)
+keymap("n", "<C-H>", "<C-W><C-H>", default_opts)
+keymap("n", "<C-K>", "<C-W><C-K>", default_opts)
+keymap("n", "<C-L>", "<C-W><C-L>", default_opts)
