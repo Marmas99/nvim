@@ -22,3 +22,6 @@ require("keymappings")
 
 -- Load Commands
 require("commands")
+
+-- Load Formater
+require("formater")
