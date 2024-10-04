@@ -12,3 +12,7 @@ vim.bo.softtabstop = 2
 
 -- Set colorscheme
 vim.cmd[[colorscheme tokyodark]]
+
+
+-- Activate git lens 
+vim.cmd[[Gitsigns toggle_current_line_blame]]
