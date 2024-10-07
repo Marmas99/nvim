@@ -8,7 +8,7 @@ keymap("n", "qq", ":q<CR>", default_opts)
 
 
 -- Open Terminal
-keymap("n", "tt", ":terminal<CR>", default_opts)
+keymap("n", "tt", ":Lspsaga term_toggle<CR>", default_opts)
 
 
 keymap("n", "<C-J>", "<C-W><C-J>", default_opts)
