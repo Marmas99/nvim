@@ -16,3 +16,7 @@ vim.cmd[[colorscheme tokyodark]]
 
 -- Activate git lens 
 vim.cmd[[Gitsigns toggle_current_line_blame]]
+
+
+-- Signcolumn yes to stop flickering/shaky text
+vim.opt.signcolumn = 'yes'
