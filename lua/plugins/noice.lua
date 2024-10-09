@@ -6,6 +6,9 @@ return {
     "rcarriga/nvim-notify",
 	},
 	opts = {
+      signature = {
+        enabled = false,  -- Disable LSP signature help
+      },
 		routes = {
 			{
 				view = "notify",
@@ -14,6 +17,9 @@ return {
 		},
 		lsp = {
 			-- override markdown rendering so that **cmp** and other plugins use **Treesitter**
+      signature = {
+        enabled = false,  -- Disable LSP signature help
+      },
 			override = {
 				["vim.lsp.util.convert_input_to_markdown_lines"] = true,
 				["vim.lsp.util.stylize_markdown"] = true,
