@@ -10,7 +10,10 @@ keymap("n", "qq", ":q<CR>", default_opts)
 -- Open Terminal
 keymap("n", "tt", ":Lspsaga term_toggle<CR>", default_opts)
 
+-- Hover keyword
+keymap("n", "K", ":Lspsaga hover_doc<CR>", default_opts)
 
+-- Move to window
 keymap("n", "<C-J>", "<C-W><C-J>", default_opts)
 keymap("n", "<C-H>", "<C-W><C-H>", default_opts)
 keymap("n", "<C-K>", "<C-W><C-K>", default_opts)
