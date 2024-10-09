@@ -13,6 +13,7 @@ return {
 
     telescope.setup({
       defaults = {
+        file_ignore_patterns = { "node_modules" },
         path_display = { "truncate " },
         mappings = {
           i = {
@@ -22,7 +23,6 @@ return {
           },
         },
       },
-      file_ignore_patterns = { "node_modules" },
     })
 
 		-- set keymaps
