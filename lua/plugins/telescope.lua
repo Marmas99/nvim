@@ -1,5 +1,5 @@
 return {
-	'nvim-telescope/telescope.nvim', 
+	'nvim-telescope/telescope.nvim',
 	branch = '0.1.x',
 	dependencies = {
 		"nvim-lua/plenary.nvim",
@@ -10,7 +10,7 @@ return {
 		local telescope = require("telescope")
 		local actions = require("telescope.actions")
 
-		
+
     telescope.setup({
       defaults = {
         path_display = { "truncate " },
@@ -22,6 +22,7 @@ return {
           },
         },
       },
+      file_ignore_patterns = { "node_modules" },
     })
 
 		-- set keymaps
