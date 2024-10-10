@@ -38,7 +38,13 @@ return {
         signature = {
           enabled = false,
         }
-      }
+      },
+      cmdline = {
+        enabled = true,
+        format = {
+          cmdline = { pattern = "^:", icon = "❯", lang = "vim" },
+        },
+      },
     })
   end,
 }
