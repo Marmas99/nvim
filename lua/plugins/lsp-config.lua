@@ -99,10 +99,15 @@ return {
       capabilities = capabilities,
       on_attach = on_attach,
 			filetypes= { "go", "gomod", "gowork", "gotmpl" },
-			
 		})
 
-		
+    -- TypeScript
+    lspconfig["eslint"].setup {
+      on_attach = on_attach,
+      filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+      cmd = { "typescript-language-server", "--stdio" }
+    }
+
 		-- local lspconfig = require('lspconfig')
 		-- -- Setup the GO LSP
 		-- require'lspconfig'.gopls.setup{
@@ -111,6 +116,5 @@ return {
 		-- 	root_dir= lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
 		-- 	single_file_support= true,
 		-- }
-		
 	end,
 }
