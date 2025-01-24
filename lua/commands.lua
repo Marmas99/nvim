@@ -11,7 +11,8 @@ vim.bo.softtabstop = 2
 
 
 -- Set colorscheme
-vim.cmd[[colorscheme tokyodark]]
+vim.cmd[[colorscheme everforest]]
+vim.cmd[[set background=light]]
 
 
 -- Activate git lens 
