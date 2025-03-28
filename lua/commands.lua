@@ -23,5 +23,5 @@ vim.cmd[[Gitsigns toggle_current_line_blame]]
 vim.opt.signcolumn = 'yes'
 
 
--- Clipboard on yank
-vim.opt.clipboard = 'unnamedplus'
+-- Clipboard on yank (laggy might fix later)
+-- vim.opt.clipboard = 'unnamedplus'
